@@ -30,8 +30,8 @@ func normalizeQRRequest(bankInput, account, accountName string, amount int64, me
 	if account == "" {
 		return nil, &fieldError{"account", "Vui lòng nhập số tài khoản."}
 	}
-	if len(account) < 4 || len(account) > 19 {
-		return nil, &fieldError{"account", "Số tài khoản phải từ 4 đến 19 ký tự."}
+	if len(account) < 3 || len(account) > 19 {
+		return nil, &fieldError{"account", "Số tài khoản phải từ 3 đến 19 ký tự."}
 	}
 	for _, r := range account {
 		if !isASCIIAlnum(r) {

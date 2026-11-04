@@ -631,8 +631,8 @@
     if (!account) {
       setFieldError("account", "Vui lòng nhập số tài khoản.");
       invalid.push(els.account);
-    } else if (account.length < 4 || account.length > 19) {
-      setFieldError("account", "Số tài khoản phải từ 4 đến 19 ký tự.");
+    } else if (account.length < 3 || account.length > 19) {
+      setFieldError("account", "Số tài khoản phải từ 3 đến 19 ký tự.");
       invalid.push(els.account);
     }
 

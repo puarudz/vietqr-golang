@@ -145,7 +145,7 @@ Errors use a consistent JSON shape:
 
 ```json
 {
-  "error": "Số tài khoản phải từ 4 đến 19 ký tự.",
+  "error": "Số tài khoản phải từ 3 đến 19 ký tự.",
   "field": "account"
 }
 ```
@@ -168,7 +168,7 @@ Request body:
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `bank` | string | Yes | Bank code, BIN, VietQR code, short name, or full name |
-| `account` | string | Yes | 4–19 ASCII letters/digits; spaces, `.`, `-`, `_` are ignored |
+| `account` | string | Yes | 3–19 ASCII letters/digits; spaces, `.`, `-`, `_` are ignored |
 | `accountName` | string | No | Up to 50 characters; returned for display, not encoded into the payload |
 | `amount` | integer | No | `0`–`999999999999` VND; `0` or omitted means the recipient enters the amount |
 | `message` | string | No | Up to 50 Unicode characters |
@@ -220,7 +220,7 @@ Query parameters:
 | Param | Required | Description |
 | --- | --- | --- |
 | `bank` | Yes | Bank code, BIN, VietQR code, short name, or full name |
-| `account` | Yes | 4–19 ASCII letters/digits |
+| `account` | Yes | 3–19 ASCII letters/digits |
 | `amount` | No | Amount in VND |
 | `message` | No | Transfer message, up to 50 characters |
 | `size` | No | Image size in pixels, `256`–`2048`; default `720` |
@@ -302,7 +302,7 @@ Bank lookup is case-insensitive and ignores spaces, `.`, `-`, `_`, and `/`. A ba
 
 | Item | Limit |
 | --- | --- |
-| Account number | 4–19 ASCII letters/digits after removing spaces, `.`, `-`, `_` |
+| Account number | 3–19 ASCII letters/digits after removing spaces, `.`, `-`, `_` |
 | Account holder name | 50 characters (display only) |
 | Amount | 0–999,999,999,999 VND |
 | Transfer message | 50 Unicode characters |
@@ -531,7 +531,7 @@ Lỗi luôn có cùng cấu trúc JSON:
 
 ```json
 {
-  "error": "Số tài khoản phải từ 4 đến 19 ký tự.",
+  "error": "Số tài khoản phải từ 3 đến 19 ký tự.",
   "field": "account"
 }
 ```
@@ -554,7 +554,7 @@ Body:
 | Trường | Kiểu | Bắt buộc | Mô tả |
 | --- | --- | --- | --- |
 | `bank` | string | Có | Mã ngân hàng, BIN, mã VietQR, tên viết tắt hoặc tên đầy đủ |
-| `account` | string | Có | 4–19 chữ/số ASCII; tự bỏ dấu cách, `.`, `-`, `_` |
+| `account` | string | Có | 3–19 chữ/số ASCII; tự bỏ dấu cách, `.`, `-`, `_` |
 | `accountName` | string | Không | Tối đa 50 ký tự; chỉ dùng để hiển thị, không nhúng vào payload |
 | `amount` | integer | Không | `0`–`999999999999` VND; `0` hoặc bỏ trống nghĩa là người nhận tự nhập số tiền |
 | `message` | string | Không | Tối đa 50 ký tự Unicode |
@@ -606,7 +606,7 @@ Tham số query:
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `bank` | Có | Mã ngân hàng, BIN, mã VietQR, tên viết tắt hoặc tên đầy đủ |
-| `account` | Có | 4–19 chữ/số ASCII |
+| `account` | Có | 3–19 chữ/số ASCII |
 | `amount` | Không | Số tiền VND |
 | `message` | Không | Nội dung chuyển khoản, tối đa 50 ký tự |
 | `size` | Không | Kích thước ảnh `256`–`2048` px; mặc định `720` |
@@ -688,7 +688,7 @@ Tìm ngân hàng không phân biệt hoa thường và bỏ qua dấu cách, `.`
 
 | Mục | Giới hạn |
 | --- | --- |
-| Số tài khoản | 4–19 chữ/số ASCII sau khi bỏ dấu cách, `.`, `-`, `_` |
+| Số tài khoản | 3–19 chữ/số ASCII sau khi bỏ dấu cách, `.`, `-`, `_` |
 | Tên chủ tài khoản | 50 ký tự (chỉ để hiển thị) |
 | Số tiền | 0–999.999.999.999 VND |
 | Nội dung chuyển khoản | 50 ký tự Unicode |
